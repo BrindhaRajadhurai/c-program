@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+int i,r,l;
+int sum=0;
+printf("enter the number:");
+scanf("%d",&i);
+l=i;
+while(i>0)
+{
+    r=i%10;
+    sum=sum+(r*r*r);
+    i=i/10;
+}
+if(l==r)
+{
+    printf("the given number is amstrong:");
+}
+else
+{
+    printf("the given number is not amstrong:");
+    
+}
+return 0;
+}
