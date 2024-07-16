@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+int p,i,n;
+void si(int,int,int);
+int ci();
+printf("enter the amount,intrest,rate,year:");
+scanf("%d%d%d",&p,&i,&n);
+si(p,i,n);
+float c=ci();
+printf("compound intrest=%.2f",c);
+}
+void si(int p,int i,int n)
+{
+float s=(p*i*n)/100;
+printf("simple intrest=%.2f",s);
+}
+int ci()
+{
+    int p,i,n;
+    printf("enter the amount,intrest,rate,year:");
+    scanf("%d%d%d",&p,&i,&n);
+    int c=p*(pow(1+(i/100),n))-p;
+    return c;
+}
+
+
