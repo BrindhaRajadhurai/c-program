@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,j,n;
+    char garde(int);
+    char result(int);
+    printf("number of subject:");
+    scanf("%d",&n);
+    struct
+    {
+        char name[100];
+        int mark;
+        char garde;
+        char result;
+    }s[n];
+    printf("enter the mark:");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<1;j++)
+        scanf("%s",&s[i].name);
+        scanf("%d",&s[i].mark);
+        s[i].garde=garde(s[i].mark);
+        
+        s[i].result=result(s[i].mark);
+    }
+    printf("sun.name\tgarde\tresult\t");
+    for(i=0;i<n;i++)
+    {
+        printf("%s\t",s[i].name);
+        printf("%c\t",s[i].garde);
+        printf("%c\t",s[i].result);
+    }
+    return 0;
+}
+char garde(int mark)
+{
+    if(mark>90)
+    return 'o';
+    if(mark>80)
+    return 'A';
+    if(mark>70)
+    return 'B';
+    if(mark>60)
+    return 'C';
+}
+char result(int mark)
+{
+    if(mark>50)
+    return 'p';
+    else
+    return 'f';
+}
+
