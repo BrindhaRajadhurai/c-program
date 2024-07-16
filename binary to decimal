@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+int i,n,sum=0,count;
+printf("enter a number convert:");
+scanf("%d",&i);
+for(i=0;i>0;i++)
+{
+    i=i%2;
+    count++;
+}
+if(sum==0)
+{
+    printf("the binary number is odd:");
+}
+else
+{
+    printf("the binary number is even:");
+}
+return 0;
+}
+
